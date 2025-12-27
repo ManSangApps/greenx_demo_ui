@@ -1,7 +1,14 @@
 let socket;
 
 export function connectWS(onMessage) {
-  socket = new WebSocket("ws://greenx-backend.onrender.com/ws/nifty");
+  const WS_URL =
+    location.protocol === "https:"
+      ? "wss://greenx-backend.onrender.com/ws/nifty"
+      : "ws://localhost:8000/ws/nifty";
+
+  socket = new WebSocket(WS_URL);
+
+  // socket = new WebSocket("wss://greenx-backend.onrender.com/ws/nifty");
   // socket = new WebSocket("ws://localhost:8000/ws/nifty");
 
   // socket = new WebSocket("ws://localhost:8000/ws");s
