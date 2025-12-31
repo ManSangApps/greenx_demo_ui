@@ -4,7 +4,7 @@ export function connectWS(onMessage) {
   const WS_URL =
     location.protocol === "https:"
       ? "wss://greenx-backend.onrender.com/ws/nifty"
-      : "ws://localhost:8000/ws/nifty";
+      : "ws://127.0.0.1:8000/ws/nifty";
 
   socket = new WebSocket(WS_URL);
 
