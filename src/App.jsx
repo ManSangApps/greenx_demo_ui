@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { connectWS } from "./api";
+import { connectData  } from "./api";
 
 import Header from "./components/Header";
 import LivePrice from "./components/LivePrice";
@@ -10,7 +10,7 @@ export default function App() {
   const [data, setData] = useState({});
 
   useEffect(() => {
-    connectWS(setData);
+    connectData(setData);
     console.log("data", data);
   }, []);
 
