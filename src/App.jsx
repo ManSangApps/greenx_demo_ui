@@ -11,6 +11,7 @@ export default function App() {
 
   useEffect(() => {
     connectWS(setData);
+    console.log("data", data);
   }, []);
 
   return (
