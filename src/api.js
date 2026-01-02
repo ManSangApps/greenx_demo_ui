@@ -9,7 +9,7 @@ export function connectData(onMessage) {
 
     pollInterval = setInterval(async () => {
       try {
-        const res = await fetch("https://greenx-backend.onrender.com/nifty");
+        const res = await fetch("https://greenx-python-backend.onrender.com/nifty");
         const data = await res.json();
         onMessage(data);
       } catch (e) {
